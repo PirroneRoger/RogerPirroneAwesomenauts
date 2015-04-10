@@ -5,10 +5,13 @@
         <group>
             <file>file:/C:/xampp/htdocs/RogerPAwesomenauts/js/screens/spendExp.js</file>
             <file>file:/C:/xampp/htdocs/RogerPAwesomenauts/js/screens/title.js</file>
+            <file>file:/C:/xampp/htdocs/RogerPAwesomenauts/php/model/config.php</file>
             <file>file:/C:/xampp/htdocs/RogerPAwesomenauts/index.css</file>
             <file>file:/C:/xampp/htdocs/RogerPAwesomenauts/index.php</file>
+            <file>file:/C:/xampp/htdocs/RogerPAwesomenauts/php/controller/login-user.php</file>
             <file>file:/C:/xampp/htdocs/RogerPAwesomenauts/js/screens/loadProfile.js</file>
             <file>file:/C:/xampp/htdocs/RogerPAwesomenauts/js/screens/newProfile.js</file>
+            <file>file:/C:/xampp/htdocs/RogerPAwesomenauts/php/controller/save-user.php</file>
         </group>
     </open-files>
 </project-private>
