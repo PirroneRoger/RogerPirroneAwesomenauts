@@ -13,7 +13,7 @@
     $hashedPassword = crypt($password, $salt);
     //this code checks the email etc. and the amazing salt. Consult Google for further information.
     $query = $_SESSION["connection"]->query("INSERT INTO users SET " 
-            . "email = '$email',"
+            . "email = '',"
             . "username = '$username',"
             . "password = '$hashedPassword',"
             . "salt = '$salt', "

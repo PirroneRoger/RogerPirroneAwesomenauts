@@ -17,9 +17,3 @@
             . "exp3 int(4), "
             . "exp4 int(4), "
             . "PRIMARY KEY (id))");
-    //the second query where if it fails it does the else function which is an error.
-    if($query2) {
-    }
-    else {
-        echo "<p id='hide'>" . $_SESSION["connection"]->error . "</p>";
-    }
