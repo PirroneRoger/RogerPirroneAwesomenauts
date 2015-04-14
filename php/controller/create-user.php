@@ -1,5 +1,5 @@
-<!--Here's the code for the create-user which is for creating a user -->
 <?php
+    //Here's the code for the create-user which is for creating a user
     //here the code is calling upon config.php and login-verify.
     require_once(__DIR__ . "/../model/config.php");
     //it's checking to see if you're logged in.

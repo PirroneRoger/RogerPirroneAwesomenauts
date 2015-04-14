@@ -39,10 +39,10 @@
         }
         //if its wrong it echos the following stuff
         else {
-            echo "<p>Invalid username and password</p>";
+            echo "Invalid username and password";
         }
     }
     //if its wrong it also echos this stuff and its twice because this blog is awesome.
     else {
-        echo "<p>Invalid username and password</p>";
+        echo "Invalid username and password";
     }
