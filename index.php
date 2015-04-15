@@ -130,9 +130,9 @@
                     .success(function(response){
                             if(response==="Invalid username and password"){
                                 alert(response);
-                        
+                                
                             }else{
-                                var data = JQuery.parseJSON(response);
+                                var data = jQuery.parseJSON(response);
                                 game.data.exp = data["exp"];
                                 game.data.exp1 = data["exp1"];
                                 game.data.exp2 = data["exp2"];

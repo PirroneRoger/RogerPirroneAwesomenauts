@@ -1,5 +1,3 @@
-<li role="presentation"><a role="menuitem" tabindex="-1" href="../index.php">Home</a></li>
-<!--The following code is for logging in the user.-->
 <?php
     require_once(__DIR__ . "/../model/config.php");
     require_once(__DIR__ . "/../controller/login-verify.php");
@@ -9,7 +7,7 @@
         'exp1'=> '',
         'exp2'=> '',
         'exp3'=> '',
-        'exp4'=> '',
+        'exp4'=> ''
     );
     
     //this code is filtering the input through the username and password database.
@@ -18,7 +16,7 @@
     
     //this code calls upon the query for salt from users to where username thing.
     $query = $_SESSION["connection"]->query("SELECT * FROM users WHERE BINARY username = '$username'");
-    echo $query->num_rows;
+  
    //This here code sets the number of rows and fetches the array
     if($query->num_rows == 1) {
         $row = $query->fetch_array();
@@ -35,7 +33,6 @@
             
             echo json_encode($array);
             
-            header("Location: " . $path . "index.php");
         }
         //if its wrong it echos the following stuff
         else {
