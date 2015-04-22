@@ -40,6 +40,7 @@ game.SpendGold = Object.extend({
         me.input.bindKey(me.input.KEY.F3, "F3", true);
         me.input.bindKey(me.input.KEY.F4, "F4", true);
         me.input.bindKey(me.input.KEY.F5, "F5", true);
+        me.input.bindKey(me.input.KEY.F6, "F6", true);
         this.setBuyText();
     },
     
@@ -75,6 +76,7 @@ game.SpendGold = Object.extend({
         me.input.unbindKey(me.input.KEY.F3, "F3", true);
         me.input.unbindKey(me.input.KEY.F4, "F4", true);
         me.input.unbindKey(me.input.KEY.F5, "F5", true);
+        me.input.unbindKey(me.input.KEY.F6, "F6", true);
         me.game.world.removeChild(game.data.buytext);
     },
     
