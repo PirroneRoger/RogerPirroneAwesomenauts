@@ -35,8 +35,9 @@ game.SpearThrow = me.Entity.extend({
     },
 
     collideHandler: function(response) {
+        console.log(response.b.type + " " + game.data.spearAttack);
         if (response.b.type === 'EnemyBase' || response.b.type === 'EnemyCreep') {
-            response.b.loseHealth(game.data.attack);
+            response.b.loseHealth(game.data.spearAttack);
             me.game.world.removeChild(this);
         }
     }
