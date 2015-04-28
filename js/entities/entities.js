@@ -1,3 +1,4 @@
+//this code here is the entire entities file that is long and does lot of important stuff.
 game.PlayerEntity = me.Entity.extend({
     init: function(x, y, settings){
         this.setSuper(x, y);
