@@ -6,7 +6,7 @@ game.PlayerEntity = me.Entity.extend({
         this.setAttributes();
         this.type = "PlayerEntity";
         this.setFlags();    
-        
+        //here's viewport code which makes the screen follow your character.
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
         
         this.addAnimation();
