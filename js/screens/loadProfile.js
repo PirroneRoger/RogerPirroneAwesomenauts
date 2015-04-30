@@ -1,8 +1,10 @@
+//code for loading profile 
 game.LoadProfile = me.ScreenObject.extend({
 	/**	
 	 *  action to perform on state change
 	 */
-	onResetEvent: function() {	
+	onResetEvent: function() {
+                //here we have code for the visibility and unbinding certain keys when we get to this screen.
 		me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage('load-screen')), -10);
                 document.getElementById("input").style.visibility = "visible";
                 document.getElementById("load").style.visibility = "visible";
@@ -13,13 +15,13 @@ game.LoadProfile = me.ScreenObject.extend({
                 me.input.unbindKey(me.input.KEY.W);
                 me.input.unbindKey(me.input.KEY.A);
                 
-                
+                //the font and size
                 me.game.world.addChild(new (me.Renderable.extend({
                     init: function(){
                         this._super(me.Renderable, 'init', [270, 240, 300, 50]);
                         this.font = new me.Font("Helvetica", 46,  "white");
                     },
-                    
+                    //drawing it which is awesome
                     draw: function(renderer){
                         this.font.draw(renderer.getContext(), "", this.pos.x, this.pos.y);
                     },
@@ -27,7 +29,7 @@ game.LoadProfile = me.ScreenObject.extend({
                     update: function(dt){
                         return true;
                     },
-                    
+                    //code for the removing expereince. 
                     newGame: function(){
                         me.input.releasePointerEvent('pointerdown', this);
                         me.save.remove('exp');
@@ -38,13 +40,13 @@ game.LoadProfile = me.ScreenObject.extend({
                         me.state.change(me.state.PLAY);
                     }
                 })));
-                
+                //setting up font and size
                     me.game.world.addChild(new (me.Renderable.extend({
                     init: function(){
                         this._super(me.Renderable, 'init', [10, 10, 300, 50]);
                         this.font = new me.Font("Helvetica", 26,  "white");
                     },
-                    
+                    //drawing text for username and password.
                     draw: function(renderer){
                         this.font.draw(renderer.getContext(), "ENTER YOUR USERNAME AND PASSWORD", this.pos.x, this.pos.y);
                     }

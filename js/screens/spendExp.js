@@ -4,7 +4,7 @@ game.SpendExp = me.ScreenObject.extend({
 	 */
 	onResetEvent: function() {	
 		me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage('exp-screen')), -10);
-                
+                //binding keys
                 me.input.bindKey(me.input.KEY.F1, "F1");
                 me.input.bindKey(me.input.KEY.F2, "F2");
                 me.input.bindKey(me.input.KEY.F3, "F3");
@@ -12,21 +12,21 @@ game.SpendExp = me.ScreenObject.extend({
                 me.input.bindKey(me.input.KEY.F5, "F5");
                 var exp1cost = ((Number(game.data.exp1) + 1) * 10);
                 
-                
+                //add child which is text box.
                 me.game.world.addChild(new (me.Renderable.extend({
                     init: function(){
                         this._super(me.Renderable, 'init', [270, 240, 300, 50]);
                         this.font = new me.Font("Helvetica", 46,  "white");
                     },
-                    
+                    //drawing ipmortant screens or somethinig.
                     draw: function(renderer){
                         this.font.draw(renderer.getContext(), "", this.pos.x, this.pos.y);
                     },
-                    
+                    //return true code!
                     update: function(dt){
                         return true;
                     },
-                    
+                    //if you start a new game this all goes away
                     newGame: function(){
                         me.input.releasePointerEvent('pointerdown', this);
                         me.save.remove('exp');
@@ -43,7 +43,7 @@ game.SpendExp = me.ScreenObject.extend({
                         this._super(me.Renderable, 'init', [10, 10, 300, 50]);
                         this.font = new me.Font("Helvetica", 26,  "white");
                     },
-                    
+                    //comments
                     draw: function(renderer){
                         this.font.draw(renderer.getContext(), "PRESS F1-F4 TO BUY, F5 TO SKIP", this.pos.x, this.pos.y);
                         this.font.draw(renderer.getContext(), "CURRENT EXP: " + game.data.exp.toString(), this.pos.x + 100, this.pos.y + 50);
@@ -88,3 +88,51 @@ game.SpendExp = me.ScreenObject.extend({
             me.event.unsubscribe(this.handler);
 	}
 });
+
+
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//LOTS OF COMMENTSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS//////////////////////////////////////////////////////////////////////////////

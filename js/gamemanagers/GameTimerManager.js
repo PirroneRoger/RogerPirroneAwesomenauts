@@ -1,3 +1,4 @@
+//this is the code for game timer
 game.GameTimerManager = Object.extend({
     init: function(x, y, settings){
         this.now = new Date().getTime();
@@ -5,7 +6,7 @@ game.GameTimerManager = Object.extend({
         this.paused = false;
         this.alwaysUpdate = true;
     },
-    
+    //this controls how often a creep spawns and gold.
     update: function(){
         this.now = new Date().getTime();
         this.goldTimerCheck();
@@ -13,7 +14,7 @@ game.GameTimerManager = Object.extend({
         
         return true;
     },
-    
+    //this is checking the timer for gold and givng you gold after a certain amount of time.
     goldTimerCheck: function() {
         if (Math.round(this.now / 1000) % 20 === 0 && (this.now - this.lastCreep >= 1000)) {
             game.data.gold += (game.data.exp1+1);
@@ -21,6 +22,7 @@ game.GameTimerManager = Object.extend({
         }
     },
     
+    //here's the creep timer check functin checking the timer for the creeps
     creepTimerCheck: function() {
         if (Math.round(this.now / 1000) % 10 === 0 && (this.now - this.lastCreep >= 1000)) {
             this.lastCreep = this.now;
